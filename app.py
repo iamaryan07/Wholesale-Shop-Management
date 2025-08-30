@@ -6,7 +6,7 @@ import secrets
 
 import streamlit as st
 import pandas as pd
-import streamlit as st from st_supabase_connection import SupabaseConnection
+from supabase import create_client, Client
 
 # =====================================================
 # CONFIG
