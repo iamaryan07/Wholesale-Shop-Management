@@ -541,7 +541,7 @@ import secrets
 
 import streamlit as st
 import pandas as pd
-from supabase import create_client, Client
+import streamlit as st from st_supabase_connection import SupabaseConnection
 
 # =====================================================
 # CONFIG
@@ -559,9 +559,9 @@ SUPABASE_KEY = st.secrets["supabase_key"]
 # Initialize Supabase client
 @st.cache_resource
 def init_supabase():
-    return create_client(SUPABASE_URL, SUPABASE_KEY)
+    return st.connection("supabase", type=SupabaseConnection)
 
-supabase: Client = init_supabase()
+supabase = init_supabase()
 
 # =====================================================
 # AUTHENTICATION FUNCTIONS
