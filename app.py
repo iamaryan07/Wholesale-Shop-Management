@@ -692,7 +692,8 @@ def page_order_wizard():
         st.divider()
         st.subheader("🛒 Step 2: Add Products to Cart")
         
-        products = execute_query("products", eq={"stock_quantity": 0}, neq={"stock_quantity": 0})  # Products with stock > 0
+        products = execute_query("products")
+        products = [p for p in products if p.get('stock_quantity', 0) > 0]
         
         if not products:
             st.error("⚠️ No products available with stock. Please add products first.")
