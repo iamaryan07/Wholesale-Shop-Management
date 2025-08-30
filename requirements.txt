@@ -1,0 +1,4 @@
+streamlit
+pandas
+supabase-py
+psycopg2-binary==2.9.7
