@@ -1,6 +1,7 @@
 Wholesale Shop Management System
 A modern, full-featured wholesale shop management system built with Streamlit and Supabase (PostgreSQL). Designed for wholesalers and distributors, this application streamlines customer, product, order, payment, and inventory management with a user-friendly interface and fully cloud-based workflow.
 
+
 🚀 Features
 Role-Based Authentication: Secure login for Managers and Staff accounts
 
@@ -20,6 +21,7 @@ Cloud Native: Database hosted on Supabase (PostgreSQL) – deploy and connect fr
 
 Secure Secrets Handling: Database credentials managed securely
 
+
 🏗️ Tech Stack
 Frontend & App: Streamlit
 
@@ -29,10 +31,12 @@ ORM: psycopg2
 
 Deployment: Streamlit Community Cloud + Supabase
 
+
 ✨ Demo Accounts
 Manager: manager / admin123
 
 Staff: staff / staff123
+
 
 ⚙️ Project Structure
 text
@@ -42,6 +46,8 @@ Wholesale-Shop-Management/
 ├── .streamlit/
 │   └── secrets.toml      # Secure database secrets (excluded from git)
 ├── README.md             # Project documentation
+
+
 🔒 Environment Setup
 Create .streamlit/secrets.toml with:
 
@@ -54,18 +60,22 @@ db_name = "postgres"
 db_port = "5432"
 Never upload secrets.toml to GitHub!
 
+
 💻 Local Development
 bash
 # Clone the repository
 git clone https://github.com/iamaryan07/Wholesale-Shop-Management.git
 cd wholesale-shop-management
 
+
 # Install dependencies
 pip install -r requirements.txt
+
 
 # Run the app
 streamlit run app.py
 Open http://localhost:8501 in your browser.
+
 
 📦 Features Overview
 User Authentication: Role-based access, user management (add, change status, reset password)
